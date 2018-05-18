@@ -1,0 +1,11 @@
+*.tst
+*.cmp
+*.out
+*.hack
+*.docx
+Book/*
+Lecture/*
+tools/*
+.DS_Store
+*/.DS_Store
+
