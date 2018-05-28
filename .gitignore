@@ -8,4 +8,5 @@ Lecture/*
 tools/*
 .DS_Store
 */.DS_Store
-
+tags
+*.taghl
