@@ -13,3 +13,4 @@ projects/demo/*
 tags
 *.taghl
 projects/06/Assembler/.venv/*
+*.pyc
