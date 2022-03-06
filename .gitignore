@@ -12,3 +12,4 @@ projects/demo/*
 */.DS_Store
 tags
 *.taghl
+.venv/*
