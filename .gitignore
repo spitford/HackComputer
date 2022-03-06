@@ -2,6 +2,7 @@
 *.cmp
 *.out
 *.hack
+*.asm
 *.docx
 Book/*
 Lecture/*
