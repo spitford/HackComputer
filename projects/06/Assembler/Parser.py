@@ -2,7 +2,6 @@ from InstructionType import *
 import sys
 
 class Parser:
-    lineNum = -1
     infile = ''
     line = None
 
@@ -13,6 +12,10 @@ class Parser:
             print ("Bad file name.")
             sys.exit(2)
 
+    def __del__(self):
+        print ("Closing file " + str(self.infile))
+        self.infile.close()
+
     def hasMoreLines(self):
         curPos = self.infile.tell()
         hasLine = bool(self.infile.readline())
@@ -21,10 +24,11 @@ class Parser:
 
     def advance(self):
         self.line = self.infile.readline().lstrip().rstrip()
-        while self.line[0] == "/" or self.line == '\n' or self.line == '\r\n':
+        while self.line == '' or self.line[0] == "/" or self.line == '\n' or self.line == '\r\n':
             self.line = self.infile.readline()
-        if self.line[0] != "(":
-            self.lineNum += 1
+        if self.line.find("/") > -1:
+            self.line = self.line[:self.line.find("/")]
+        self.line = self.line.lstrip().rstrip()
     
     def instructionType(self):
         if self.line[0] == "@":
