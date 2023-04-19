@@ -4,6 +4,7 @@
 *.hack
 *.asm
 *.docx
+*.vm
 Book/*
 Lecture/*
 tools/*
