@@ -14,3 +14,5 @@ tags
 *.taghl
 projects/06/Assembler/.venv/*
 *.pyc
+.vscode/*
+projects/06/Assembler/.vscode/*
